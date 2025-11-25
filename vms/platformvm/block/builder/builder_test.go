@@ -106,7 +106,7 @@ func TestBuildBlockShouldReward(t *testing.T) {
 		now    = env.backend.Clk.Time()
 		nodeID = ids.GenerateTestNodeID()
 
-		defaultValidatorStake = 100 * units.MilliAvax
+		defaultValidatorStake = 100 * units.MilliRink
 		validatorStartTime    = now.Add(2 * txexecutor.SyncBound)
 		validatorEndTime      = validatorStartTime.Add(360 * 24 * time.Hour)
 	)
@@ -315,7 +315,7 @@ func TestBuildBlockInvalidStakingDurations(t *testing.T) {
 
 	var (
 		now                   = env.backend.Clk.Time()
-		defaultValidatorStake = 100 * units.MilliAvax
+		defaultValidatorStake = 100 * units.MilliRink
 
 		// Add a validator ending in [MaxStakeDuration]
 		validatorEndTime = now.Add(env.config.MaxStakeDuration)

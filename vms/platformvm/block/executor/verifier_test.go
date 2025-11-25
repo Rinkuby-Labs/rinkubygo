@@ -216,7 +216,7 @@ func TestVerifierVisitAtomicBlock(t *testing.T) {
 		exportedOutput = &avax.TransferableOutput{
 			Asset: avax.Asset{ID: verifier.ctx.AVAXAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt:          units.NanoAvax,
+				Amt:          units.NanoRink,
 				OutputOwners: secp256k1fx.OutputOwners{},
 			},
 		}
@@ -326,7 +326,7 @@ func TestVerifierVisitStandardBlock(t *testing.T) {
 			},
 			Asset: avax.Asset{ID: ctx.AVAXAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt:          units.Avax,
+				Amt:          units.Rink,
 				OutputOwners: owner,
 			},
 		}
@@ -1291,9 +1291,9 @@ func TestDeactivateLowBalanceL1Validators(t *testing.T) {
 				EndAccumulatedFee: endAccumulatedFee,
 			}
 		}
-		fractionalTimeL1Validator0 = newL1Validator(1 * units.NanoAvax) // lasts .5 seconds
-		fractionalTimeL1Validator1 = newL1Validator(1 * units.NanoAvax) // lasts .5 seconds
-		wholeTimeL1Validator       = newL1Validator(2 * units.NanoAvax) // lasts 1 second
+		fractionalTimeL1Validator0 = newL1Validator(1 * units.NanoRink) // lasts .5 seconds
+		fractionalTimeL1Validator1 = newL1Validator(1 * units.NanoRink) // lasts .5 seconds
+		wholeTimeL1Validator       = newL1Validator(2 * units.NanoRink) // lasts 1 second
 	)
 
 	tests := []struct {
@@ -1356,7 +1356,7 @@ func TestDeactivateLowBalanceL1Validators(t *testing.T) {
 			config := validatorfee.Config{
 				Capacity:                 genesis.LocalParams.ValidatorFeeConfig.Capacity,
 				Target:                   genesis.LocalParams.ValidatorFeeConfig.Target,
-				MinPrice:                 gas.Price(2 * units.NanoAvax), // Min price is increased to allow fractional fees
+				MinPrice:                 gas.Price(2 * units.NanoRink), // Min price is increased to allow fractional fees
 				ExcessConversionConstant: genesis.LocalParams.ValidatorFeeConfig.ExcessConversionConstant,
 			}
 			lowBalanceL1ValidatorsEvicted, err := deactivateLowBalanceL1Validators(config, diff)
@@ -1383,7 +1383,7 @@ func TestDeactivateLowBalanceL1ValidatorBlockChanges(t *testing.T) {
 		NodeID:            ids.GenerateTestNodeID(),
 		PublicKey:         bls.PublicKeyToUncompressedBytes(signer.PublicKey()),
 		Weight:            1,
-		EndAccumulatedFee: 3 * units.NanoAvax, // lasts 1.5 seconds
+		EndAccumulatedFee: 3 * units.NanoRink, // lasts 1.5 seconds
 	}
 
 	tests := []struct {
@@ -1444,7 +1444,7 @@ func TestDeactivateLowBalanceL1ValidatorBlockChanges(t *testing.T) {
 				ValidatorFeeConfig: validatorfee.Config{
 					Capacity:                 genesis.LocalParams.ValidatorFeeConfig.Capacity,
 					Target:                   genesis.LocalParams.ValidatorFeeConfig.Target,
-					MinPrice:                 gas.Price(2 * units.NanoAvax), // Min price is increased to allow fractional fees
+					MinPrice:                 gas.Price(2 * units.NanoRink), // Min price is increased to allow fractional fees
 					ExcessConversionConstant: genesis.LocalParams.ValidatorFeeConfig.ExcessConversionConstant,
 				},
 			})

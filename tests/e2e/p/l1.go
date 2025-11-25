@@ -53,7 +53,7 @@ import (
 
 const (
 	genesisWeight   = units.Schmeckle
-	genesisBalance  = units.Avax
+	genesisBalance  = units.Rink
 	registerWeight  = genesisWeight / 10
 	updatedWeight   = 2 * registerWeight
 	registerBalance = 0
@@ -387,7 +387,7 @@ var _ = e2e.DescribePChain("[L1]", func() {
 						{
 							Asset: avax.Asset{ID: pWallet.Builder().Context().AVAXAssetID},
 							Out: &secp256k1fx.TransferOutput{
-								Amt: 100 * units.MicroAvax,
+								Amt: 100 * units.MicroRink,
 								OutputOwners: secp256k1fx.OutputOwners{
 									Threshold: 1,
 									Addrs: []ids.ShortID{
@@ -737,7 +737,7 @@ var _ = e2e.DescribePChain("[L1]", func() {
 		tc.By("issuing an IncreaseL1ValidatorBalanceTx", func() {
 			_, err := pWallet.IssueIncreaseL1ValidatorBalanceTx(
 				registerValidationID,
-				units.Avax,
+				units.Rink,
 			)
 			require.NoError(err)
 		})

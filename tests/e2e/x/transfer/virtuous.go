@@ -90,7 +90,7 @@ var _ = e2e.DescribeXChainSerial("[Virtuous Transfer Tx AVAX]", func() {
 			require.NoError(err)
 			testKeys = append(testKeys, newKeys...)
 
-			const transferPerRound = units.MilliAvax
+			const transferPerRound = units.MilliRink
 
 			tc.By("Funding new keys")
 			fundingWallet := e2e.NewWallet(tc, env.NewKeychain(), env.GetRandomNodeURI())

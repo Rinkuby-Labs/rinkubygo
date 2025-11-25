@@ -86,7 +86,7 @@ func issueTransaction(
 	require.NoError(tc, err)
 
 	gasPrice := e2e.SuggestGasPrice(tc, ethClient)
-	const amount = 10 * units.Avax // Arbitrary amount to transfer
+	const amount = 10 * units.Rink // Arbitrary amount to transfer
 	tx := types.NewTransaction(
 		acceptedNonce,
 		addr,

@@ -78,7 +78,7 @@ func TestRemoveSubnetValidatorTxSerialization(t *testing.T) {
 							ID: avaxAssetID,
 						},
 						In: &secp256k1fx.TransferInput{
-							Amt: units.MilliAvax,
+							Amt: units.MilliRink,
 							Input: secp256k1fx.Input{
 								SigIndices: []uint32{5},
 							},
@@ -131,7 +131,7 @@ func TestRemoveSubnetValidatorTxSerialization(t *testing.T) {
 		0x25, 0x91, 0xb2, 0x30, 0x27, 0xa8, 0x7d, 0xff,
 		// secp256k1fx transfer input type ID
 		0x00, 0x00, 0x00, 0x05,
-		// input amount = 1 MilliAvax
+		// input amount = 1 MilliRink
 		0x00, 0x00, 0x00, 0x00, 0x00, 0x0f, 0x42, 0x40,
 		// number of signatures needed in input
 		0x00, 0x00, 0x00, 0x01,
@@ -211,7 +211,7 @@ func TestRemoveSubnetValidatorTxSerialization(t *testing.T) {
 							ID: avaxAssetID,
 						},
 						In: &secp256k1fx.TransferInput{
-							Amt: units.Avax,
+							Amt: units.Rink,
 							Input: secp256k1fx.Input{
 								SigIndices: []uint32{2, 5},
 							},
