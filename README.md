@@ -1,15 +1,15 @@
 <div align="center">
-  <img src="resources/AvalancheLogoRed.png?raw=true">
+  
 </div>
 
 ---
 
-Node implementation for the [Avalanche](https://avax.network) network -
+Node implementation for the [Rinkuby] network -
 a blockchains platform with high throughput, and blazing fast transactions.
 
 ## Installation
 
-Avalanche is an incredibly lightweight protocol, so the minimum computer requirements are quite modest.
+Rinkuby is an incredibly lightweight protocol, so the minimum computer requirements are quite modest.
 Note that as network usage increases, hardware requirements may change.
 
 The minimum recommended hardware specification for nodes connected to Mainnet is:
@@ -40,9 +40,9 @@ cd avalanchego
 
 This will clone and checkout the `master` branch.
 
-#### Building AvalancheGo
+#### Building RinkubyGo
 
-Build AvalancheGo by running the build task:
+Build RinkubyGo by running the build task:
 
 ```sh
 ./scripts/run_task.sh build
@@ -56,7 +56,7 @@ The `avalanchego` binary is now in the `build` directory. To run:
 
 ### Binary Repository
 
-Install AvalancheGo using an `apt` repository.
+Install RinkubyGo using an `apt` repository.
 
 #### Adding the APT Repository
 
@@ -66,8 +66,8 @@ To add the repository on Ubuntu, run:
 
 ```sh
 sudo su -
-wget -qO - https://downloads.avax.network/avalanchego.gpg.key | tee /etc/apt/trusted.gpg.d/avalanchego.asc
-source /etc/os-release && echo "deb https://downloads.avax.network/apt $UBUNTU_CODENAME main" > /etc/apt/sources.list.d/avalanche.list
+wget -qO -  | tee /etc/apt/trusted.gpg.d/avalanchego.asc
+source /etc/os-release && echo "deb  $UBUNTU_CODENAME main" > /etc/apt/sources.list.d/avalanche.list
 exit
 ```
 
@@ -82,7 +82,7 @@ sudo apt install avalanchego
 
 ### Binary Install
 
-Download the [latest build](https://github.com/ava-labs/avalanchego/releases/latest) for your operating system and architecture.
+Download the [latest build]for your operating system and architecture.
 
 The Avalanche binary to be executed is named `avalanchego`.
 
@@ -127,7 +127,7 @@ You can use `Ctrl+C` to kill the node.
 To connect to the Fuji Testnet, run:
 
 ```sh
-./build/avalanchego --network-id=fuji
+./build/rinkubygo --network-id=chennai
 ```
 
 ### Creating a Local Testnet
