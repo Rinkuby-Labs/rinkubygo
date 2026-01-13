@@ -100,7 +100,7 @@ func addNodeFlags(fs *pflag.FlagSet) {
 	fs.String(UpgradeFileContentKey, "", "Specifies base64 encoded upgrade content")
 
 	// Network ID
-	fs.String(NetworkNameKey, constants.MainnetName, "Network ID this node will connect to")
+	fs.String(NetworkNameKey, constants.RinkubyName, "Network ID this node will connect to")
 
 	// ACP flagging
 	fs.IntSlice(ACPSupportKey, nil, "ACPs to support adoption")
