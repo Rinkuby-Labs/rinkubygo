@@ -7,7 +7,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ava-labs/coreth/ethclient"
+	"github.com/Rinkuby-Labs/coreth/ethclient"
 	"github.com/ava-labs/libevm/core/types"
 	"github.com/onsi/ginkgo/v2"
 	"github.com/stretchr/testify/require"

@@ -19,11 +19,11 @@ require (
 	connectrpc.com/connect v1.18.1
 	connectrpc.com/grpcreflect v1.3.0
 	github.com/DataDog/zstd v1.5.2
+	github.com/Rinkuby-Labs/coreth v1.0.3
+	github.com/Rinkuby-Labs/subnet-evm v1.0.3
 	github.com/StephenButtolph/canoto v0.17.3
 	github.com/antithesishq/antithesis-sdk-go v0.3.8
-	github.com/ava-labs/coreth v0.16.0-rc.0
 	github.com/ava-labs/libevm v1.13.15-0.20251016142715-1bccf4f2ddb2
-	github.com/ava-labs/subnet-evm v0.8.1-db-metrics-fix
 	github.com/btcsuite/btcd/btcutil v1.1.3
 	github.com/cespare/xxhash/v2 v2.3.0
 	github.com/cockroachdb/pebble v0.0.0-20230928194634-aa077af62593
@@ -85,8 +85,6 @@ require (
 	k8s.io/client-go v0.29.0
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b
 )
-
-require github.com/ava-labs/firewood-go-ethhash/ffi v0.0.13 // indirect
 
 require (
 	github.com/Microsoft/go-winio v0.6.1 // indirect

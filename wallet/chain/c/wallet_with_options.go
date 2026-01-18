@@ -4,7 +4,7 @@
 package c
 
 import (
-	"github.com/ava-labs/coreth/plugin/evm/atomic"
+	"github.com/Rinkuby-Labs/coreth/plugin/evm/atomic"
 
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/vms/secp256k1fx"

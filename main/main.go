@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ava-labs/coreth/plugin/evm"
+	"github.com/Rinkuby-Labs/coreth/plugin/evm"
 	"github.com/spf13/pflag"
 	"golang.org/x/term"
 

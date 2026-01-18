@@ -7,9 +7,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ava-labs/coreth/ethclient"
-	"github.com/ava-labs/coreth/plugin/evm/atomic"
-	"github.com/ava-labs/coreth/plugin/evm/client"
+	"github.com/Rinkuby-Labs/coreth/ethclient"
+	"github.com/Rinkuby-Labs/coreth/plugin/evm/atomic"
+	"github.com/Rinkuby-Labs/coreth/plugin/evm/client"
 
 	"github.com/ava-labs/avalanchego/api/info"
 	"github.com/ava-labs/avalanchego/codec"
