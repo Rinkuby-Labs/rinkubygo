@@ -228,7 +228,7 @@ task reexecute-cchain-range-with-copied-data EXECUTION_DATA_DIR=$HOME/.reexecute
 
 To support testing the VM in multiple configurations, the benchmark supports a set of pre-defined configs passed via the Task variable ex. `CONFIG=archive`.
 
-The currently supported options are: "default", "archive", and "firewood".
+The currently supported options are: "default" and "archive".
 
 To execute a benchmark with any of these options, you must use a compatible `CURRENT_STATE_DIR` or `CURRENT_STATE_DIR_SRC` or the VM will refuse to start with an incompatible existing database and newly provided config.
 
@@ -267,16 +267,16 @@ Both workflows provide three triggers:
 
 The manual workflow takes in all parameters specified by the user. To more easily specify a CI matrix and avoid GitHub's pain inducing matrix syntax, we define simple JSON files with the exact set of configs to run for each `pull_request` and `schedule` trigger. To add a new job for either of these triggers, simply define the entry in JSON and add it to run on the desired workflow.
 
-For example, to add a new Firewood benchmark to execute the block range [30m, 40m] on a daily basis, follow the instructions above to generate the Firewood state as of block height 30m, export it to S3, and add the following entry under the `schedule` include array in the [GH Native JSON file](../../../.github/workflows/c-chain-reexecution-benchmark-gh-native.json).
+For example, to add a new archive benchmark to execute the block range [30m, 40m] on a daily basis, follow the instructions above to generate the archive state as of block height 30m, export it to S3, and add the following entry under the `schedule` include array in the [GH Native JSON file](../../../.github/workflows/c-chain-reexecution-benchmark-gh-native.json).
 
 ```json
 {
     "runner": "blacksmith-4vcpu-ubuntu-2404",
-    "config": "firewood",
+    "config": "archive",
     "start-block": 30000001,
     "end-block": 40000000,
     "block-dir-src": "s3://avalanchego-bootstrap-testing/cchain-mainnet-blocks-50m-ldb/**",
-    "current-state-dir-src": "s3://avalanchego-bootstrap-testing/cchain-current-state-firewood-30m/**",
+    "current-state-dir-src": "s3://avalanchego-bootstrap-testing/cchain-current-state-archive-30m/**",
     "timeout-minutes": 1440
 }
 ```
@@ -296,11 +296,11 @@ Copy your desired parameters as JSON into a file or write it out on the command 
 ```json
 {
     "runner": "blacksmith-4vcpu-ubuntu-2404",
-    "config": "firewood",
+    "config": "archive",
     "start-block": "101",
     "end-block": "200",
     "block-dir-src": "s3://avalanchego-bootstrap-testing/cchain-mainnet-blocks-10k-ldb/**",
-    "current-state-dir-src": "s3://avalanchego-bootstrap-testing/cchain-current-state-firewood-100/**",
+    "current-state-dir-src": "s3://avalanchego-bootstrap-testing/cchain-current-state-archive-100/**",
     "timeout-minutes": "5"
 }
 ```

@@ -83,12 +83,6 @@ var (
 		"archive": `{
 			"pruning-enabled": false
 		}`,
-		"firewood": `{
-			"state-scheme": "firewood",
-			"snapshot-cache": 0,
-			"pruning-enabled": true,
-			"state-sync-enabled": false
-		}`,
 	}
 
 	configNameArg  string
